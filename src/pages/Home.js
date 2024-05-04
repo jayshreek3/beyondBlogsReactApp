@@ -11,7 +11,7 @@ function Home(isAuth){
             setPostLists(data.docs.map((doc) => ({...doc.data(), id:doc.id})));
         }
         getPosts();
-    }, []);
+    }, [postsCollectionRef]);
 
     const deletePost = async (id) => {
         const postDoc = doc(db, "posts", id);

@@ -20,7 +20,7 @@ function CreatePost({isAuth}){
         if(!isAuth){
             navigate("/login") //pass isAuth as props to create post page
         }
-    }, []);
+    }, [isAuth, navigate]);
     return (
         <div className="createPostPage">
             {" "}

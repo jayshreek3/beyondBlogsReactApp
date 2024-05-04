@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    outline: none;
+    font-size: medium;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-wrapper {
+    background-color: #eee;
+    width: 80%;
+    height: 80%;
+    border-radius: 3rem;
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.green-bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #3ab19b, #4cbf91);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3rem;
+    z-index: 50;
+    transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container.change .green-bg {
+    width: 40%;
+}
+.green-bg button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.1rem solid white;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.banner {
+    position: absolute;
+    z-index: 100; /*The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.
+  */
+    top: 25%;
+    left: -30rem;
+    text-align: center;
+    color: white;
+    width: 16rem;
+}
+.container.change .banner {
+    left: 5rem;
+    transition: left 0.8s;
+}
+.banner h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.signup-form {
+    width: 60rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+    transition: left 0.6s;
+}
+.container.change .signup-form {
+    left: 15rem;
+}
+.signup-form h1 {
+    font-size: 28px;
+    color: #3aaf9f;
+}
+.social-media {
+    display: flex;
+}
+
+.social-media i {
+    width: 4rem;
+    height: 4rem;
+    border: 0.1 rem solid #777;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.6rem;
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: -50px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.signup-form p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 20rem;
+    height: 3rem;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #ddd;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 1.6rem;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.signup-form button {
+    width: 8rem;
+    height: 7rem;
+    padding: 1rem;
+    background-color: #3aaf9f;
+    border: 0.1rem solid white;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    color: white;
+    margin: 0;
+}
